@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:activiti="http://activiti.org/bpmn"
+             xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:tns="http://www.activiti.org/test"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             expressionLanguage="http://www.w3.org/1999/XPath"
+             id="m1584328310484"
+             name=""
+             targetNamespace="http://www.activiti.org/test"
+             typeLanguage="http://www.w3.org/2001/XMLSchema">
+   <process xmlns="" id="leaveProcess" isClosed="false" isExecutable="true" name="离职流程"
+            processType="None">
+      <userTask activiti:assignee="左慧君" activiti:exclusive="true" id="leave_2" name="PL审批"/>
+      <startEvent id="leave_1" name="开始流程"/>
+      <userTask activiti:assignee="饭缸" activiti:exclusive="true" id="leave_3" name="部门经理审批"/>
+      <sequenceFlow id="_6" sourceRef="leave_1" targetRef="leave_2"/>
+      <sequenceFlow id="_7" sourceRef="leave_2" targetRef="leave_3"/>
+      <userTask activiti:assignee="盐盐" activiti:exclusive="true" id="leave_4" name="财务审批"/>
+      <sequenceFlow id="_10" sourceRef="leave_3" targetRef="leave_4"/>
+      <endEvent id="leave_5" name="流程结束"/>
+      <sequenceFlow id="_12" sourceRef="leave_4" targetRef="leave_5"/>
+   </process>
+   <bpmndi:BPMNDiagram xmlns=""
+                       documentation="background=#FFFFFF;count=1;horizontalcount=1;orientation=0;width=842.4;height=1195.2;imageableWidth=832.4;imageableHeight=1185.2;imageableX=5.0;imageableY=5.0"
+                       id="Diagram-_1"
+                       name="New Diagram">
+      <bpmndi:BPMNPlane bpmnElement="leaveProcess">
+         <bpmndi:BPMNShape bpmnElement="leave_2" id="Shape-leave_2">
+            <omgdc:Bounds height="55.0" width="85.0" x="225.0" y="230.0"/>
+            <bpmndi:BPMNLabel>
+               <omgdc:Bounds height="55.0" width="85.0" x="0.0" y="0.0"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="leave_1" id="Shape-leave_1">
+            <omgdc:Bounds height="32.0" width="32.0" x="245.0" y="90.0"/>
+            <bpmndi:BPMNLabel>
+               <omgdc:Bounds height="32.0" width="32.0" x="0.0" y="0.0"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="leave_3" id="Shape-leave_3">
+            <omgdc:Bounds height="55.0" width="85.0" x="235.0" y="380.0"/>
+            <bpmndi:BPMNLabel>
+               <omgdc:Bounds height="55.0" width="85.0" x="0.0" y="0.0"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="leave_4" id="Shape-leave_4">
+            <omgdc:Bounds height="60.0" width="85.0" x="240.0" y="550.0"/>
+            <bpmndi:BPMNLabel>
+               <omgdc:Bounds height="60.0" width="85.0" x="0.0" y="0.0"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNShape bpmnElement="leave_5" id="Shape-leave_5">
+            <omgdc:Bounds height="32.0" width="32.0" x="275.0" y="700.0"/>
+            <bpmndi:BPMNLabel>
+               <omgdc:Bounds height="32.0" width="32.0" x="0.0" y="0.0"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNShape>
+         <bpmndi:BPMNEdge bpmnElement="_12" id="BPMNEdge__12" sourceElement="_9" targetElement="_11">
+            <omgdi:waypoint x="291.0" y="610.0"/>
+            <omgdi:waypoint x="291.0" y="700.0"/>
+            <bpmndi:BPMNLabel>
+               <omgdc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_6" id="BPMNEdge__6" sourceElement="_3" targetElement="_2">
+            <omgdi:waypoint x="261.0" y="122.0"/>
+            <omgdi:waypoint x="261.0" y="230.0"/>
+            <bpmndi:BPMNLabel>
+               <omgdc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_7" id="BPMNEdge__7" sourceElement="_2" targetElement="_4">
+            <omgdi:waypoint x="272.5" y="285.0"/>
+            <omgdi:waypoint x="272.5" y="380.0"/>
+            <bpmndi:BPMNLabel>
+               <omgdc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+         <bpmndi:BPMNEdge bpmnElement="_10" id="BPMNEdge__10" sourceElement="_4" targetElement="_9">
+            <omgdi:waypoint x="280.0" y="435.0"/>
+            <omgdi:waypoint x="280.0" y="550.0"/>
+            <bpmndi:BPMNLabel>
+               <omgdc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
+            </bpmndi:BPMNLabel>
+         </bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+   </bpmndi:BPMNDiagram>
+</definitions>
